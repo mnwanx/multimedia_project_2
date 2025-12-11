@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUHAMMAD NAJWAN BIN HASSAN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="email.css" />
+    <link rel="stylesheet" href="logout.css" />
+    <link rel="stylesheet" href="change_section.css" />
+    
+    <script src="email_function.js"></script>
+</head>
+<body onload="check_cookie()">
+   <script>
+      function check_cookie() {
+        cookies = document.cookie.split(";");
+        if (cookies.indexOf(" login=true") != -1) {
+          alert("Welcome to my website!");
+        } else  {
+          alert("Please login first");
+          window.location = "/login.html"
+        }
+      }
+    </script>
+    <button class="logout-btn" onclick="logout()">
+  <!-- Logout Icon -->
+  <svg viewBox="0 0 24 24">
+    <path d="M16 13v-2H7V8l-5 4 5 4v-3h9zM20 3h-8v2h8v14h-8v2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+  </svg>
+  Logout
+</button>
+    <video id="video_background" src="./video.mp4" muted autoplay loop></video>
+ <div class="audio-player" id="playerBox">
+  <div class="drip"></div>
+  <div class="drip"></div>
+  <div class="drip"></div>
+
+  <div class="title" id="title">Second Heartbeat</div>
+  <div class="artist" id="artist">Avenged Sevenfold</div>
+
+  <audio id="audio" src="./second heartbeat.mp3" autoplay="true"></audio>
+
+  <div class="controls">
+    <button class="play-btn" id="playBtn">💀</button>
+
+    <div class="progress" id="progress">
+      <div class="progress-filled" id="progressFilled"></div>
+    </div>
+
+    <div class="time" id="time">0:00</div>
+  </div>
+    <div class="volume-container">
+    <div class="volume-label">🔪 Volume</div>
+    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+</div>
+    <center>
+        <h1 id="welcome_heading">Welcome to my page</h1>
+    <h2 id="profile_heading">This is my profile and section A page</h2>
+    
+    <p>
+        <h3  id="profile_information">Muhammad Najwan bin Hassan</h3>
+        <h3  id="profile_information">22 Years Old</h3>
+        <h3  id="profile_information">my hobby learning new things and improving my skills</h3>
+        <h3  id="profile_information">Im interested in:</h3>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="./interest1.png" alt="Image 1" id="interest1">
+            <h2>Technical / Engineering</h2>
+        </div>
+
+        <div class="card">
+            <img src="./interest2.png" alt="Image 2">
+            <h2>Musics</h2>
+        </div>
+    </div>
+    </p>
+    <!-- <audio src="./audio.mp3" autoplay controls></audio> -->
+    <br>
+    <video src="./afterlife.mp4" controls poster="https://i.ytimg.com/vi/xkQTgRJCREU/maxresdefault.jpg"></video>
+
+    <h3 id="visit_link">Please visit my: </h3>
+    <table border="1">
+  <tr>
+    <td><a href="https://github.com/mnwanx">GitHub</a></td>
+    <td><a href="https://mnwanx.github.io/pro">Real website</a></td>
+    <td><a href="https://linkedin.com/in/mnwanx">LinkedIn</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://instagram.com/mnwanx">Instagram</a></td>
+    <td><a href="https://opentransfer.onrender.com">OpenTransfer Project</a></td>
+    <td><a href="https://streameo.onrender.com">Streameo Project</a></td>
+  </tr>
+</table>
+
+
+<h3 id="visit_img">Click Those Images to see my projects</h3>
+
+    <div class="card-container">
+      <a href="https://mnwanx.github.io/pcb_defect_detector/">
+        <div class="card">
+            <img src="./project1.png" alt="Image 1" id="interest1">
+            <h2>PCB Defect A.I.</h2>
+        </div>
+      </a>
+
+
+      <a href="https://www.linkedin.com/posts/mnwanx_iot-embeddedsystem-microcontroller-activity-7370707802996137986-kz7z?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFI756IBy0L0gr7K3EC-5W8vIDCVUozCCRE">
+        <div class="card">
+            <img id="interest1" src="./project2.png" alt="Image 2">
+            <h2>iConveyor</h2>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/posts/mnwanx_artificialintelligence-objectdetection-machinelearning-activity-7373940017729249281-z2Md?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFI756IBy0L0gr7K3EC-5W8vIDCVUozCCRE">
+        <div class="card">
+            <img src="./project3.png" alt="Image 2">
+            <h2>Intrusion Detection A.I.</h2>
+        </div>
+      </a>
+         <div class="card">
+            <img id="interest1" src="./project4.png" alt="Image 2">
+            <h2>OpenTransfer</h2>
+        </div>
+    </div>
+    <p id="more_project">More on my <u><a href="https://mnwanx.github.io/pro">real website</a></u></p>
+    <h3 id="visit_guitar">and my guitar cover</h3>
+
+    <div class="card-container">
+      <a href="https://www.tiktok.com/@mnwanx/video/7554579743371283728?is_from_webapp=1&sender_device=pc">  
+      <div class="card">
+            <img id="interest2" src="./to end the rapture.png" alt="Image 1" id="interest1">
+            <h2>To End The Rapture</h2>
+        </div></a>
+
+        <a href="https://www.tiktok.com/@mnwanx/video/7480064391514230017?is_from_webapp=1&sender_device=pc">
+        <div class="card">
+            <img id="interest2" src="./eternal rest.png" alt="Image 2">
+            <h2>Eternal Rest</h2>
+        </div>
+      </a>
+      <a href="https://www.tiktok.com/@mnwanx/video/7399518215694568720?is_from_webapp=1&sender_device=pc">
+        <div class="card">
+            <img id="interest2" src="./scream.png" alt="Image 2">
+            <h2>Scream</h2>
+        </div>
+        </a>
+        <a href="https://www.tiktok.com/@mnwanx/video/7562385733126769936?is_from_webapp=1&sender_device=pc">
+         <div class="card">
+            <img id="interest2" src="./floods.png" alt="Image 2">
+            <h2>Floods</h2>
+        </div>
+        </a>
+    </div>
+
+    <div class="email-form">
+      <h2>Email</h2>
+
+      <label>Receiver</label>
+      <input type="email" id="email_receiver" placeholder="someone@darkrealm.com">
+
+      <label>Subject</label>
+      <input type="text" id="email_subject" placeholder="Whispers from the shadows">
+
+      <label>Body</label>
+      <textarea id="email_body" placeholder="Write your message..."></textarea>
+
+      <button onclick="send_email()">Send into the Abyss</button>
+    </div>
+<h3>Geo-Location Map (Home Address)</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.388837337194!2d103.9213123!3d1.5173199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3b669466e339%3A0x86733a1e12797e88!2sNo.%2041%2C%20Jalan%20Kedidi%2020%2C%20Taman%20Scientex%2C%2081700%20Pasir%20Gudang%2C%20Johor!5e0!3m2!1sen!2smy!4v1701956102604!5m2!1sen!2smy" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+                <p>My favorite equation is E = mc<sup>2</sup> and my index notation includes x<sub>0</sub> and a<sub>n</sub>.</p>
+    <p>Common compounds in electronics include SiO<sub>2</sub> and H<sub>2</sub>O used in wafer cleaning.</p>
+        <a href="/indexB.html" class="next-btn">Move to Section B</a>
+    </center>
+    <script src="function.js"></script>
+</body>
+</html>

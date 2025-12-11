@@ -1,0 +1,42 @@
+  .logout-btn {
+    position: absolute;
+    top: 1.5%;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    color: #ffffff;
+    background: linear-gradient(145deg, #550000, #2b0000);
+    border: 2px solid #770000;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+      0 0 12px #ff000055,
+      inset 0 0 12px #260000;
+    transition: 0.25s;
+  }
+
+  .logout-btn:hover {
+    background: linear-gradient(145deg, #990000, #440000);
+    box-shadow:
+      0 0 20px #ff0000aa,
+      inset 0 0 15px #550000;
+    letter-spacing: 1px;
+    transform: scale(1.03);
+  }
+
+  .logout-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #ff5555;
+    filter: drop-shadow(0 0 4px #ff0000);
+    transition: 0.25s;
+  }
+
+  .logout-btn:hover svg {
+    fill: #ff9999;
+    filter: drop-shadow(0 0 6px #ff0000);
+  }

@@ -1,0 +1,296 @@
+ @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@font-face {
+ 
+font-family: "BitcountPropSingle";
+  src: url("./BitcountPropSingle.ttf") format(truetype);
+}
+        html    {
+            color: white;
+            font-family: 'BitcountPropSingle';
+            /* font-family: 'UnifrakturCook', cursive; */
+            background: black;
+        }
+        #video_background    {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+          table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    background: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  td {
+    border: 1px solid #333;
+    padding: 12px 15px;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  td:hover {
+    background: #333;
+  }
+
+  a {
+    color: #7fc8ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+    video {
+        position: absolute;
+        bottom: 10%;
+        right: 0%;
+        width: 30%;
+    }
+   @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    92% { opacity: 0.85; }
+    95% { opacity: 1; }
+    98% { opacity: 0.6; }
+  }
+
+  @keyframes blood-drip {
+    0% { transform: translateY(0); opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(25px); opacity: 0; }
+  }
+
+  @keyframes glitch {
+    0% { text-shadow: 1px 0 red; }
+    20% { text-shadow: -2px 0 #ff4444; }
+    40% { text-shadow: 2px 0 #aa0000; }
+    60% { text-shadow: -1px 0 #ff2222; }
+    100% { text-shadow: 1px 0 red; }
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 10px #ff000022, inset 0 0 12px #ff000022; }
+    50% { box-shadow: 0 0 18px #ff000099, inset 0 0 16px #ff000044; }
+    100% { box-shadow: 0 0 10px #ff000022, inset 0 0 12px #ff000022; }
+  }
+
+  .audio-player {
+    position: absolute;
+    bottom: 10%;
+    width: 380px;
+    padding: 26px;
+    height: 120px;
+    background: #080808;
+    color: #ff2b2b;
+    font-family: "Courier New", monospace;
+    /* opacity: .1; */
+
+    border-radius: 28px; /* ROUNDED */
+    border: 2px solid #4b0000;
+
+    box-shadow: 
+      0 0 20px #ff000033, 
+      inset 0 0 18px #ff000022;
+
+    animation: flicker 4s infinite steps(25);
+    /* position: relative; */
+    overflow: hidden;
+  }
+
+  /* blood drips */
+  .drip {
+    position: absolute;
+    width: 4px;
+    height: 14px;
+    background: #ff0000;
+    left: 50%;
+    top: 0;
+    border-radius: 6px;
+    animation: blood-drip 1.8s infinite;
+  }
+
+  .drip:nth-child(2) { left: 22%; animation-delay: 0.4s; }
+  .drip:nth-child(3) { left: 76%; animation-delay: 1s; }
+
+  .title {
+    font-size: 20px;
+    text-align: center;
+    /* margin-bottom: 1px; */
+    animation: glitch 1.8s infinite;
+  }
+
+  .artist {
+    text-align: center;
+    font-size: 14px;
+    /* margin-bottom: 1px; */
+    color: #ff7777;
+    opacity: 0.8;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%; /* ROUND NOW */
+    background: #160000;
+    color: #ff2b2b;
+    cursor: pointer;
+    font-size: 26px;
+    transition: 0.2s;
+    box-shadow: 0 0 10px #ff000044;
+  }
+
+  .play-btn:hover {
+    background: #240000;
+    box-shadow: 0 0 16px #ff000099;
+  }
+
+  .progress {
+    flex: 1;
+    height: 10px;
+    background: #300000;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 0 12px #ff000033;
+  }
+
+  .progress-filled {
+    height: 100%;
+    width: 0%;
+    background: #ff1a1a;
+    border-radius: 6px;
+    box-shadow: 0 0 8px #ff0000aa;
+  }
+
+  .time {
+    font-size: 12px;
+    color: #ff4d4d;
+  }
+  .volume-container {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .volume-label {
+    font-size: 14px;
+    color: #ff4444;
+    animation: glitch 2.2s infinite;
+  }
+
+  .volume-slider {
+    -webkit-appearance: none;
+    width: 40%;
+    height: 8px;
+    background: #2b0000;
+    border-radius: 4px;
+    position: relative;
+
+    /* the “blade” */
+    box-shadow: inset 0 0 10px #ff000044, 0 0 8px #ff000022;
+  }
+
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+
+    /* knife handle */
+    border-radius: 4px;
+    background: #ff1a1a;
+    box-shadow: 0 0 10px #ff0000aa;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .volume-slider::-webkit-slider-thumb:hover {
+    background: #ff4444;
+    box-shadow: 0 0 14px #ff0000ff;
+  }
+    .card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* allows stacking on small screens */
+  }
+
+  .card {
+    width: 250px;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  #interest1    {
+    height: 180px;
+  }
+  #interest2   {
+    height: 380px;
+  }
+
+  #welcome_heading  {
+    font-size: 80px;
+    font-weight: 420;
+    letter-spacing: 10px;
+  }
+
+   #profile_heading  {
+    font-size: 40px;
+    font-weight: 420;
+  }
+   #profile_information  {
+    font-size: 30px;
+    font-weight: 350;
+  }
+
+  #visit_link  {
+    font-size: 80px;
+    font-weight: 350;
+  }
+
+#visit_img {
+    font-size: 65px;
+    font-weight: 350;
+  }
+#visit_guitar {
+    font-size: 65px;
+    font-weight: 250;
+    font-family: 'UnifrakturCook', cursive;
+  }
+
+  #more_projects  {
+    font-weight: 100;
+    font-size: 30px;
+  }
