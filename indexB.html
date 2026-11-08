@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sectionB_a7x.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bottom_navigation.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>
+      function check_cookie() {
+        cookies = document.cookie.split(";");
+        if (localStorage.getItem("multimedia_login") != null) {
+          // alert("Welcome to my website!");
+          
+        } else  {
+          alert("Please login first");
+          window.location = "./login.html"
+        }
+      }
+    </script>
+</head>
+<body onload="check_cookie()">
+    <section id="engineering" class="page engineering" style="background-image: url('https://externlabs.com/blogs/wp-content/uploads/2021/10/iot-embedded-system-prev.webp'); background-size: cover;">
+
+  <div class="section-content">
+
+    <!-- 1. Topic Title -->
+    <h1 class="section-title">Embedded Systems</h1>
+
+    <!-- 2. Description + Image -->
+    <div class="section-body">
+
+      <div class="text">
+        <p>
+  An embedded system is a specialized computer system designed to perform
+  a specific function within a larger system. It integrates hardware and
+  software components such as microcontrollers, sensors, memory, and
+  actuators to operate efficiently and reliably in real time.
+</p>
+
+<p>
+  Embedded systems are widely used in everyday applications including
+  home appliances, automotive control units, industrial machines, medical
+  devices, and consumer electronics. Unlike general-purpose computers,
+  embedded systems are optimized for dedicated tasks with low power
+  consumption and high reliability.
+</p>
+
+        <!-- 3. Significance / Importance -->
+    <div class="importance">
+     <h2>Significance of Embedded Systems</h2>
+      <ul>
+        <li>Enable automation and intelligent control in modern devices</li>
+    <li>Provide real-time performance for time-critical applications</li>
+    <li>Reduce system cost, size, and power consumption</li>
+    <li>Form the foundation for technologies such as IoT, robotics, and smart systems</li>
+      </ul>
+    </div>
+
+
+      </div>
+
+    
+      <div class="image">
+        <img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/08/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-updated.jpg" alt="ESP32 Dev Board Pinout">
+        <p class="caption">Figure: ESP32 Dev Board Pinout</p>
+      </div>
+
+    </div>
+
+    
+
+  </div>
+
+</section>
+
+    <section id="a7x" class="page a7x" style="background-image: url('https://cdn.wallpapersafari.com/96/81/CRtPq8.jpg'); background-size: cover;">
+
+  <div class="section-content">
+
+    <!-- 1. Topic Title -->
+    <h1 class="section-title">Avenged Sevenfold (A7X)</h1>
+
+    <!-- 2. Description + Image -->
+    <div class="section-body">
+
+      <div class="text">
+        <p>
+          Avenged Sevenfold, commonly known as A7X, is an American heavy metal
+          band formed in 1999. The band is known for combining elements of
+          metalcore, heavy metal, and hard rock, while also incorporating
+          complex guitar solos, powerful drumming, and strong vocal melodies.
+        </p>
+
+        <p>
+          One of the most distinctive features of Avenged Sevenfold is their
+          use of dual guitar harmonies and advanced lead guitar techniques,
+          which are heavily influenced by classic metal bands. Their music
+          often explores themes such as personal struggle, war, faith, and
+          societal issues.
+        </p>
+        
+        <div class="importance">
+      <h2>Significance and Influence</h2>
+      <ul>
+        <li>Helped bridge modern metal with classic heavy metal elements</li>
+        <li>Inspired many guitarists through complex solos and harmonized riffs</li>
+        <li>Expanded metal music to a wider mainstream audience</li>
+        <li>Encouraged creativity and technical skill in modern music production</li>
+      </ul>
+    </div>
+
+      </div>
+
+      <div class="image">
+        <img src="./a7x_band.jpg" alt="Avenged Sevenfold Band">
+        <p class="caption">Figure: Avenged Sevenfold (original line up)</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Significance / Importance -->
+    
+
+  </div>
+
+</section>
+
+<nav class="bottom-nav">
+    <a href="#engineering" class="nav-item">
+    <i class="fas fa-computer"></i>
+    Embedded System
+  </a>
+  <a href="#a7x" class="nav-item">
+    <i class="fas fa-skull"></i>
+    Avenged Sevenfold
+  </a>
+  <a href="./index.html" class="nav-item">
+    <i class="fas fa-door-open"></i>
+    Section A
+  </a>
+   <a onclick="logout()" class="nav-item">
+    <i class="fas fa-power-off"></i>
+    Logout
+  </a>
+</nav>
+<script src="function.js"></script>
+</body>
+</html>

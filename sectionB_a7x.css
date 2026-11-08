@@ -1,0 +1,66 @@
+.section-b {
+  padding: 40px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.section-body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.section-body .text {
+    font-size: 20px;
+  flex: 1;
+}
+
+.section-body .image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-body img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+img  {
+    
+    top: 50%;
+    width: 60%;
+}
+
+
+.caption {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.importance {
+  margin-top: 40px;
+}
+
+.importance h2  {
+    font-weight: 400;
+}
+
+.importance ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .section-body {
+    flex-direction: column;
+  }
+}

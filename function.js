@@ -1,16 +1,16 @@
 function login()    {
     username = document.getElementById("username") . value;
     password = document.getElementById("password") . value;
-    if ((username == "admin") && (password == "password"))  {
-        document.cookie = "login=true; path=/";
-        window.location = "/";
+    if ((username == "abc") && (password == "123"))  {
+        localStorage.setItem("multimedia_login", "true");
+        window.location = "./index.html";
     }
 }
 
 
 function logout()   {
-    document.cookie = "login=false";
-    window.location.reload();
+    localStorage.removeItem("multimedia_login");
+    window.location.href = "./login.html";
 }
 
   const audio = document.getElementById("audio");
@@ -20,6 +20,12 @@ function logout()   {
   const time = document.getElementById("time");
   const playerBox = document.getElementById("playerBox");
 
+
+
+  
+
+
+
   playBtn.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
@@ -27,7 +33,7 @@ function logout()   {
       playerBox.style.animation = "pulse 1.4s infinite"; // glowing when playing
     } else {
       audio.pause();
-      playBtn.textContent = "💀";
+      playBtn.textContent = "►";
       playerBox.style.animation = "flicker 4s infinite steps(25)";
     }
   });
@@ -56,3 +62,64 @@ function logout()   {
   volumeSlider.addEventListener("input", () => {
     audio.volume = volumeSlider.value;
   });
+
+
+
+  function CustomAlert(){
+ 
+    this.alert = function(message,title){
+      // document.body.innerHTML = document.body.innerHTML + '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
+      const wrapper = document.createElement("div");
+wrapper.innerHTML = `
+  <div id="dialogoverlay"></div>
+  <div id="dialogbox" class="slit-in-vertical">
+    <div>
+      <div id="dialogboxhead"></div>
+      <div id="dialogboxbody"></div>
+      <div id="dialogboxfoot"></div>
+    </div>
+  </div>
+`;
+document.body.appendChild(wrapper);
+  
+      let dialogoverlay = document.getElementById('dialogoverlay');
+      let dialogbox = document.getElementById('dialogbox');
+      
+      let winH = window.innerHeight;
+      dialogoverlay.style.height = winH+"px";
+      
+      dialogbox.style.top = "100px";
+  
+      dialogoverlay.style.display = "block";
+      dialogbox.style.display = "block";
+      
+      document.getElementById('dialogboxhead').style.display = 'block';
+  
+      if(typeof title === 'undefined') {
+        document.getElementById('dialogboxhead').style.display = 'none';
+      } else {
+        document.getElementById('dialogboxhead').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> '+ title;
+      }
+      document.getElementById('dialogboxbody').innerHTML = message;
+      document.getElementById('dialogboxfoot').innerHTML = '<button class="pure-material-button-contained active" onclick="customAlert.ok();">OK</button>';
+    }
+    
+    this.ok = function(){
+      document.getElementById('dialogbox').style.display = "none";
+      document.getElementById('dialogoverlay').style.display = "none";
+      playBtn.click();
+    }
+
+    // thunder_sfx.play(); rain_sfx.play();
+    
+      
+
+  }
+
+ let customAlert = new CustomAlert();
+
+  
+
+
+
+

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="login.css">
-    <script src="function.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="function.js"></script>
 </head>
+
 <body>
-    <center>
-        <div class="login-form">
-  <h2>Login</h2>
-  <input type="text" id="username" placeholder="Username">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">Login</button>
-  <div class="links">
-    <a href="#">Forgot password? Email Developer!</a>
+
+  <!-- Background overlay -->
+  <div class="bg-overlay"></div>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <h2>Sign In</h2>
+      <p class="subtitle">Enter your credentials</p>
+
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <div class="links">
+        <a>Username: abc <br>Password: 123</a>
+      </div>
+    </div>
   </div>
-</div>
-    </center>
+
 </body>
 </html>

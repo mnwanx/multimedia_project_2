@@ -8,41 +8,92 @@
     <link rel="stylesheet" href="email.css" />
     <link rel="stylesheet" href="logout.css" />
     <link rel="stylesheet" href="change_section.css" />
+    <link rel="stylesheet" href="bottom_navigation.css" />
+    <link rel="stylesheet" href="welcome.css" />
+    <link rel="stylesheet" href="sectionA.css" />
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <script src="email_function.js"></script>
+    
+    
 </head>
 <body onload="check_cookie()">
+<!-- <body > -->
    <script>
       function check_cookie() {
         cookies = document.cookie.split(";");
-        if (cookies.indexOf(" login=true") != -1) {
-          alert("Welcome to my website!");
+        if (localStorage.getItem("multimedia_login") != null) {
+          // alert("Welcome to my website!");
+          customAlert.alert('Welcome to my page!');
+          
         } else  {
           alert("Please login first");
-          window.location = "/login.html"
+          window.location = "./login.html"
         }
       }
     </script>
-    <button class="logout-btn" onclick="logout()">
-  <!-- Logout Icon -->
-  <svg viewBox="0 0 24 24">
-    <path d="M16 13v-2H7V8l-5 4 5 4v-3h9zM20 3h-8v2h8v14h-8v2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
-  </svg>
-  Logout
-</button>
-    <video id="video_background" src="./video.mp4" muted autoplay loop></video>
- <div class="audio-player" id="playerBox">
-  <div class="drip"></div>
-  <div class="drip"></div>
-  <div class="drip"></div>
+  
 
-  <div class="title" id="title">Second Heartbeat</div>
+    <center>
+      <section id="profile" style="background-image:url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg'); background-size: cover;" class="page profile">
+        <h1 id="welcome_heading">Welcome to my page</h1>
+        <br>
+
+        <!-- test -->
+          <div class="section-content">
+    <!-- 2. Description + Image -->
+    <div class="section-body">
+
+      <div class="text">
+    <div class="importance">
+     <h2 id="topic_title">About Me</h2>
+      <ul>
+        <li>My name is Muhammad Najwan bin Hassan</li>
+        <li>I'm student of MARA University of Technology (UiTM). I'm 22<sup>nd</sup> years old.</li>
+      </ul>
+     <h2 id="topic_title">My Hobby</h2>
+      <ul>
+        <li>I love to play guitar (Avenged Sevenfold's songs) when I have free time and my guitar hero is Synyster Gates.</li>
+      </ul>
+      <h2 id="topic_title">My Interest</h2>
+      <ul>
+        <li>I love to explore new skills in engineering (software programming or electronics) by building side projects.</li>
+        <li>I also love to understand how the "art of engineering" works, like how Sustainiac is able to sustain a guitar note or how the bare metal electronic worked.</li>
+      </ul>
+      <h2 id="topic_title">My Home Address:</h2>
+      <ul>
+      <li>41, Jln Kedidi 20
+41, Jalan Kedidi 20, 81750 Pasir Gudang, Johor Darul Ta'zim</li>
+      </ul>
+    </div>
+
+
+      </div>
+
+    
+      <div class="image">
+        <video src="./afterlife.mp4" controls poster="https://i.ytimg.com/vi/xkQTgRJCREU/maxresdefault.jpg" autoplay muted></video>
+        <div class="card-container">
+        <div class="card">
+            <img src="./interest1.png" alt="Image 1" id="interest1">
+            <h2>Technical / Engineering</h2>
+        </div>
+
+        <div class="card">
+            <img src="./interest2.png" alt="Image 2">
+            <h2>Musics</h2>
+        </div>
+        
+             <div class="audio-player" id="playerBox">
+
+  <div class="title" id="title">Chapter Four</div>
   <div class="artist" id="artist">Avenged Sevenfold</div>
 
-  <audio id="audio" src="./second heartbeat.mp3" autoplay="true"></audio>
+  <audio id="audio" src="./chapter four.mp3" autoplay="true"></audio>
 
   <div class="controls">
-    <button class="play-btn" id="playBtn">💀</button>
+    <button class="play-btn" id="playBtn">⏸</button>
 
     <div class="progress" id="progress">
       <div class="progress-filled" id="progressFilled"></div>
@@ -55,48 +106,80 @@
     <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1">
   </div>
 </div>
-    <center>
-        <h1 id="welcome_heading">Welcome to my page</h1>
-    <h2 id="profile_heading">This is my profile and section A page</h2>
-    
-    <p>
-        <h3  id="profile_information">Muhammad Najwan bin Hassan</h3>
-        <h3  id="profile_information">22 Years Old</h3>
-        <h3  id="profile_information">my hobby learning new things and improving my skills</h3>
-        <h3  id="profile_information">Im interested in:</h3>
-
-    <div class="card-container">
-        <div class="card">
-            <img src="./interest1.png" alt="Image 1" id="interest1">
-            <h2>Technical / Engineering</h2>
-        </div>
-
-        <div class="card">
-            <img src="./interest2.png" alt="Image 2">
-            <h2>Musics</h2>
-        </div>
     </div>
-    </p>
+      </div>
+
+    </div>
+
+    
+
+  </div>
+         <!-- test -->
+    <br>
+        <p>My favorite equation is E = mc<sup>2</sup> and my index notation includes x<sub>0</sub> and a<sub>n</sub>.</p>
+    <p>Common compounds in electronics include SiO<sub>2</sub> and H<sub>2</sub>O used in wafer cleaning.</p>
+
+    
+
     <!-- <audio src="./audio.mp3" autoplay controls></audio> -->
     <br>
-    <video src="./afterlife.mp4" controls poster="https://i.ytimg.com/vi/xkQTgRJCREU/maxresdefault.jpg"></video>
 
+    
+    <br>
+    
+<hr>
+    </section>
+
+    <section id="hyperlink" style="background-image:url('https://mnwanx.github.io/pro/assets/assets/montage1.jpg'); background-size: cover;" class="page hyperlink">
     <h3 id="visit_link">Please visit my: </h3>
     <table border="1">
-  <tr>
-    <td><a href="https://github.com/mnwanx">GitHub</a></td>
-    <td><a href="https://mnwanx.github.io/pro">Real website</a></td>
-    <td><a href="https://linkedin.com/in/mnwanx">LinkedIn</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://instagram.com/mnwanx">Instagram</a></td>
-    <td><a href="https://opentransfer.onrender.com">OpenTransfer Project</a></td>
-    <td><a href="https://streameo.onrender.com">Streameo Project</a></td>
-  </tr>
-</table>
+      <tr>
+        <td>
+          <a href="https://github.com/mnwanx">
+          <i class="fa-brands fa-github" style="font-size:50px;"></i><br>
+            GitHub
+          </a>
+        </td>
+        <td>
+          <a href="https://mnwanx.github.io/pro">
+          <i class="fa-solid fa-globe" style="font-size:50px;"></i><br>
+            Real Website
+          </a>
+        </td>
+        <td>
+          <a href="https://linkedin.com/in/mnwanx">
+          <i class="fa-brands fa-linkedin" style="font-size:50px;"></i><br>
+            LinkedIn
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://instagram.com/mnwanx">
+          <i class="fa-brands fa-instagram" style="font-size:50px;"></i><br>
+            Instagram
+          </a>
+        </td>
+        <td>
+          <a href="https://opentransfer.onrender.com">
+          <i class="fa-regular fa-file" style="font-size:50px;"></i><br>
+            OpenTransfer Project
+          </a>
+        </td>
+        <td>
+          <a href="https://streameo.onrender.com">
+          <i class="fa-solid fa-music" style="font-size:50px;"></i><br>
+            Streameo Project
+          </a>
+        </td>
+      </tr>
+    </table>
+</section>
 
+<hr>
 
-<h3 id="visit_img">Click Those Images to see my projects</h3>
+<section id="projects" style="background-image:url('https://mnwanx.github.io/pro/assets/assets/montage2.jpg'); background-size: cover;" class="page projects">
+<h3 id="visit_img">Click those images to see my projects</h3>
 
     <div class="card-container">
       <a href="https://mnwanx.github.io/pcb_defect_detector/">
@@ -119,12 +202,17 @@
             <h2>Intrusion Detection A.I.</h2>
         </div>
       </a>
+      <a href="https://opentransfer.onrender.com">
          <div class="card">
             <img id="interest1" src="./project4.png" alt="Image 2">
             <h2>OpenTransfer</h2>
         </div>
+        </a>
     </div>
-    <p id="more_project">More on my <u><a href="https://mnwanx.github.io/pro">real website</a></u></p>
+    <p id="more_project">More on my <u><a id="more_project" href="https://mnwanx.github.io/pro">real website</a></u></p>
+    </section>
+<hr>
+    <section id="hobby" style="background-image:url('https://mnwanx.github.io/pro/assets/assets/montage4.png'); background-size: cover;" class="page hobby">
     <h3 id="visit_guitar">and my guitar cover</h3>
 
     <div class="card-container">
@@ -153,7 +241,9 @@
         </div>
         </a>
     </div>
-
+    </section>
+<hr>
+    <section id="email" style="background-image:url('./envelope.jpg'); background-size: cover;" class="page email">
     <div class="email-form">
       <h2>Email</h2>
 
@@ -168,7 +258,11 @@
 
       <button onclick="send_email()">Send into the Abyss</button>
     </div>
-<h3>Geo-Location Map (Home Address)</h3>
+    <p id="more_project">Give it a try! It will work!</p>
+    </section>
+<hr>
+    <section id="geolocation">
+<h3 id="profile_information">Geo-Location Map (Home Address)</h3>
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.388837337194!2d103.9213123!3d1.5173199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3b669466e339%3A0x86733a1e12797e88!2sNo.%2041%2C%20Jalan%20Kedidi%2020%2C%20Taman%20Scientex%2C%2081700%20Pasir%20Gudang%2C%20Johor!5e0!3m2!1sen!2smy!4v1701956102604!5m2!1sen!2smy" 
                 width="100%" 
@@ -178,10 +272,64 @@
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-                <p>My favorite equation is E = mc<sup>2</sup> and my index notation includes x<sub>0</sub> and a<sub>n</sub>.</p>
-    <p>Common compounds in electronics include SiO<sub>2</sub> and H<sub>2</sub>O used in wafer cleaning.</p>
-        <a href="/indexB.html" class="next-btn">Move to Section B</a>
+            
+            <a href="./indexB.html" class="next-btn">Move to Section B</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+<hr>
+      </section>
+                
+        
     </center>
+
+  <nav class="bottom-nav">
+    <a href="#profile" class="nav-item">
+    <i class="fas fa-user"></i>
+    Profile
+  </a>
+
+  <a href="#hyperlink" class="nav-item">
+    <i class="fas fa-link"></i>
+    Hyperlink
+  </a>
+  <a href="#projects" class="nav-item">
+    <i class="fas fa-gear"></i>
+    Projects
+  </a>
+
+  <a href="#hobby" class="nav-item">
+    <i class="fas fa-guitar"></i>
+    Hobby
+  </a>
+  <a href="#email" class="nav-item">
+    <i class="fas fa-envelope"></i>
+    E-Mail
+  </a>
+
+  <a href="#geolocation" class="nav-item">
+    <i class="fas fa-map"></i>
+    GeoLocation
+  </a>
+  <a href="./indexB.html" class="nav-item">
+    <i class="fas fa-door-open"></i>
+    Section B
+  </a>
+  <a onclick="logout()" class="nav-item">
+    <i class="fas fa-power-off"></i>
+    Logout
+  </a>
+
+  
+</nav>
     <script src="function.js"></script>
+      <!-- <script src="welcome.js"></script> -->
 </body>
 </html>

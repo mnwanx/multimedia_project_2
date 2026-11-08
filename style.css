@@ -5,29 +5,29 @@ font-family: "BitcountPropSingle";
   src: url("./BitcountPropSingle.ttf") format(truetype);
 }
         html    {
+          scroll-behavior: smooth;
             color: white;
-            font-family: 'BitcountPropSingle';
+            /* font-family: 'BitcountPropSingle'; */
             /* font-family: 'UnifrakturCook', cursive; */
             background: black;
         }
-        #video_background    {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+          section {
+    height: 200%;
+  }
+        
           table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 500px;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 250px;
     margin: 20px auto;
     background: #1a1a1a;
     color: #fff;
     font-family: Arial, sans-serif;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 10;
   }
 
   td {
@@ -53,9 +53,10 @@ font-family: "BitcountPropSingle";
 
     video {
         position: absolute;
-        bottom: 10%;
+        bottom: 110%;
         right: 0%;
-        width: 30%;
+        width: 50%;
+        right: 25%;
     }
    @keyframes flicker {
     0%, 100% { opacity: 1; }
@@ -86,7 +87,7 @@ font-family: "BitcountPropSingle";
 
   .audio-player {
     position: absolute;
-    bottom: 10%;
+    bottom: -80%;
     width: 380px;
     padding: 26px;
     height: 120px;
@@ -107,20 +108,6 @@ font-family: "BitcountPropSingle";
     overflow: hidden;
   }
 
-  /* blood drips */
-  .drip {
-    position: absolute;
-    width: 4px;
-    height: 14px;
-    background: #ff0000;
-    left: 50%;
-    top: 0;
-    border-radius: 6px;
-    animation: blood-drip 1.8s infinite;
-  }
-
-  .drip:nth-child(2) { left: 22%; animation-delay: 0.4s; }
-  .drip:nth-child(3) { left: 76%; animation-delay: 1s; }
 
   .title {
     font-size: 20px;
@@ -134,7 +121,6 @@ font-family: "BitcountPropSingle";
     font-size: 14px;
     /* margin-bottom: 1px; */
     color: #ff7777;
-    opacity: 0.8;
   }
 
   .controls {
@@ -170,6 +156,11 @@ font-family: "BitcountPropSingle";
     cursor: pointer;
     box-shadow: inset 0 0 12px #ff000033;
   }
+
+  .fas {
+    cursor: pointer;
+  }
+ 
 
   .progress-filled {
     height: 100%;
@@ -226,6 +217,7 @@ font-family: "BitcountPropSingle";
     box-shadow: 0 0 14px #ff0000ff;
   }
     .card-container {
+
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -248,7 +240,9 @@ font-family: "BitcountPropSingle";
     border-radius: 10px;
     margin-bottom: 10px;
   }
-
+#topic_title  {
+  font-family: 'BitcountPropSingle';
+}
   .card h2 {
     font-size: 18px;
     margin: 0;
@@ -264,6 +258,7 @@ font-family: "BitcountPropSingle";
     font-size: 80px;
     font-weight: 420;
     letter-spacing: 10px;
+    font-family: 'BitcountPropSingle';
   }
 
    #profile_heading  {
@@ -278,6 +273,7 @@ font-family: "BitcountPropSingle";
   #visit_link  {
     font-size: 80px;
     font-weight: 350;
+    
   }
 
 #visit_img {
@@ -287,10 +283,28 @@ font-family: "BitcountPropSingle";
 #visit_guitar {
     font-size: 65px;
     font-weight: 250;
-    font-family: 'UnifrakturCook', cursive;
+    /* font-family: 'UnifrakturCook', cursive; */
   }
 
-  #more_projects  {
-    font-weight: 100;
-    font-size: 30px;
+  #more_project  {
+    font-weight: 400;
+    font-size: 50px;
   }
+.page {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  z-index: 0; /* NORMAL layer */
+}
+
+/* Overlay */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1; /* behind content */
+  pointer-events: none; /* VERY IMPORTANT */
+}
